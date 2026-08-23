@@ -1,0 +1,38 @@
+{
+  "name": "genpark-realtime-voice-interruption-turn-taking-manager-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time acoustic voice interruption and turn-taking manager with sub-150ms speech cutoff for natural conversational AI agents.",
+  "author": "genpark",
+  "category": "voice",
+  "tags": [
+    "voice-agent",
+    "interruption-handler",
+    "turn-taking",
+    "barge-in",
+    "vapi"
+  ],
+  "inputs": {
+    "audio_chunk_ms": {
+      "type": "integer"
+    },
+    "speaker_activity": {
+      "type": "object"
+    }
+  },
+  "outputs": {
+    "turn_taking_state": {
+      "type": "string"
+    },
+    "interrupt_detected": {
+      "type": "boolean"
+    },
+    "agent_speech_cutoff_latency_ms": {
+      "type": "integer"
+    },
+    "recommended_action": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
